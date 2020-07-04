@@ -3,24 +3,39 @@ import {
     HeaderWrapper,
     HeaderIcon,
     HeaderTitle,
-    HeaderMenu
+    HeaderMenu, HomeMenu, AboutMenu, ContactMenu
 } from '../styles'
 
+import icon from '../../assets/soil.svg';
 
-function Header() {
-    return (
-        <>
+
+class Header extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
             <HeaderWrapper>
-                <HeaderIcon/>
+                <HeaderIcon style={{backgroundImage: `url(${icon})`}}/>
                 <HeaderTitle>
                     Soil testing
                 </HeaderTitle>
                 <HeaderMenu>
-                    A
+                    <HomeMenu onClick={() => this.props.setPageName('home')}>
+                        Home
+                    </HomeMenu>
+                    <AboutMenu onClick={() => this.props.setPageName('about')}>
+                        About us
+                    </AboutMenu>
+                    <ContactMenu onClick={() => this.props.setPageName('contact')}>
+                        Contact us
+                    </ContactMenu>
                 </HeaderMenu>
             </HeaderWrapper>
-        </>
-    )
+        )
+    }
+
 }
 
 export default Header;

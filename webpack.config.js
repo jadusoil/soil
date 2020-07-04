@@ -19,16 +19,18 @@ module.exports = {
             { test: /\.jsx$/, use: 'babel-loader', exclude: /node_modules/ },
             { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]},
             {
-                test: /\.svg$/,
+                test: /\.(gif|png|jpe?g|svg)$/i,
                 use: [
+                    'file-loader',
                     {
-                        loader: 'svg-url-loader',
+                        loader: 'image-webpack-loader',
                         options: {
-                            limit: 10000,
+                            bypassOnDebug: true, // webpack@1.x
+                            disable: true, // webpack@2.x and newer
                         },
                     },
                 ],
-            },
+            }
         ]
     },
     plugins: [

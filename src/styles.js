@@ -1,5 +1,4 @@
 import Styled from 'styled-components';
-import icon from '../assets/soil-icon.svg';
 
 export const Wrapper = Styled.div`
     display: block;
@@ -10,36 +9,67 @@ export const Wrapper = Styled.div`
 
 export const HeaderWrapper = Styled.div`
     display: flex;
-    background-color: grey;
     height: 100px;
 `;
 
 export const HeaderIcon = Styled.div`
     display: flex;
-    background-image: url(${icon});
-    height: 100px;
     flex: 10;
-    margin: 33px 0px 0px 0px;
+    height: 100%;
+    width: 100px;
 `;
 
 export const HeaderTitle = Styled.div`
     display: flex;
     height: 100%;
     flex: 90;
-    margin: 33px 0px 0px 0px;
+    margin: 35px 0px 0px 15px;
+    font-size: 24px;
 `;
 
 export const HeaderMenu = Styled.div`
     display: flex;
-    background-color: grey;
-    height: 100%;
-    flex: 50;
-    margin: auto;
+    flex: 20;
+    margin: 35px 20px 0px 15px;
+    justify-content: space-between;
 `;
 
 export const ContentWrapper = Styled.div`
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: light-pink;
+`;
+
+export const MarqueWrapper = Styled.div`
+    display: flex;
+    margin: 20px 0px 0px 0px;
+    justify-content: center;
+    color: red;
+    height: 100px;
+    width: 100%;
+`;
+
+export const BodyWrapper = Styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 200px 0px 0px 0px;
+`;
+
+export const HomeMenu = Styled.div`
+    display: flex;
+    cursor: pointer;
+    color: green;
+`;
+
+export const AboutMenu = Styled.div`
+    display: flex;
+    cursor: pointer;
+    color: green;
+`;
+
+export const ContactMenu = Styled.div`
+    display: flex;
+    cursor: pointer;
+    color: green;
 `;
