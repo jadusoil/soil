@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
-    "build": "webpack"
+    "build": "webpack",
+    "homepage": "http://gitname.github.io/soil",
+    "predeploy": "npm run build",
+    "deploy": "soil -d build"
   },
   "author": "",
   "license": "ISC",
