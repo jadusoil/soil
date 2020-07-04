@@ -9,7 +9,7 @@ const PORT = process.env.PORT || "8080";
 module.exports = {
     entry: './src/index.js',
     output: {
-        publicPath: '/',
+        publicPath: './',
         path: path.join(__dirname, 'build'),
         filename: 'bundle.js'
     },
