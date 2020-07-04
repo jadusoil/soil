@@ -35,7 +35,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Disqus',
+            title: 'Soil',
             template: './public/index.html'
         }),
         new webpack.NamedModulesPlugin(),
@@ -43,7 +43,7 @@ module.exports = {
     ],
     devServer: {
         historyApiFallback: true,
-        contentBase: '/dist/',
+        contentBase: './build/',
         host:HOST,
         port:PORT,
         compress: true,
