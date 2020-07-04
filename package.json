@@ -8,7 +8,7 @@
     "build": "webpack --config webpack.config.js",
     "homepage": "http://jadusoil.github.io/soil",
     "predeploy": "npm run build",
-    "deploy": "soil -d build"
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
