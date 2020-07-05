@@ -9,6 +9,7 @@ import {
 import Home from "./home/Home";
 import AboutUs from "./about/AboutUs";
 import ContactUs from "./contact/ContactUs";
+import ImageGallery from "./gallery/ImageGallery";
 
 class AppWrapper extends React.Component {
 
@@ -26,16 +27,16 @@ class AppWrapper extends React.Component {
     };
 
     render() {
-        return (<Wrapper>
-            <Header setPageName={this.setPageName}/>
-            <ContentWrapper>
-                <MarqueWrapper>
-                    <marquee width="50%">
-                        <h3>Test soil to grow most suited crop.</h3>
-                    </marquee>
-                </MarqueWrapper>
-                <BodyWrapper>
-                    <div>
+        return (
+            <Wrapper>
+                <Header setPageName={this.setPageName}/>
+                <ContentWrapper>
+                    <MarqueWrapper>
+                        <marquee width="50%">
+                            <h3>Test soil to grow most suited crop.</h3>
+                        </marquee>
+                    </MarqueWrapper>
+                    <BodyWrapper>
                         {
                             this.state.pageName === 'home' && <Home/>
                         }
@@ -45,11 +46,13 @@ class AppWrapper extends React.Component {
                         {
                             this.state.pageName === 'contact' && <ContactUs/>
                         }
+                        {
+                            this.state.pageName === 'gallery' && <ImageGallery/>
+                        }
 
-                    </div>
-                </BodyWrapper>
-            </ContentWrapper>
-        </Wrapper>)
+                    </BodyWrapper>
+                </ContentWrapper>
+            </Wrapper>)
     }
 }
 

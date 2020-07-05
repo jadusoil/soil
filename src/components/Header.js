@@ -3,7 +3,7 @@ import {
     HeaderWrapper,
     HeaderIcon,
     HeaderTitle,
-    HeaderMenu, HomeMenu, AboutMenu, ContactMenu
+    HeaderMenu, HomeMenu, AboutMenu, ContactMenu, GalleryMenu
 } from '../styles'
 
 import icon from '../../assets/soil.svg';
@@ -19,7 +19,7 @@ class Header extends React.Component {
             <HeaderWrapper>
                 <HeaderIcon style={{backgroundImage: `url(${icon})`}}/>
                 <HeaderTitle>
-                    Soil testing
+                    Greenery Soil Testing (A complete soil testing laboratory)
                 </HeaderTitle>
                 <HeaderMenu>
                     <HomeMenu onClick={() => this.props.setPageName('home')}>
@@ -31,6 +31,9 @@ class Header extends React.Component {
                     <ContactMenu onClick={() => this.props.setPageName('contact')}>
                         Contact us
                     </ContactMenu>
+                    <GalleryMenu onClick={() => this.props.setPageName('gallery')}>
+                        Images
+                    </GalleryMenu>
                 </HeaderMenu>
             </HeaderWrapper>
         )

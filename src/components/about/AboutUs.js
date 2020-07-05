@@ -3,7 +3,7 @@ import React from 'react';
 function AboutUs() {
     return (
         <>
-            <h4>About Us Page</h4>
+            <h4>GREENERY SOIL TESTING LAB</h4>
         </>
     )
 }
